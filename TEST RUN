@@ -1,0 +1,118 @@
+class color:
+   PURPLE = '\033[95m'
+   CYAN = '\033[96m'
+   DARKCYAN = '\033[36m'
+   BLUE = '\033[94m'
+   GREEN = '\033[92m'
+   YELLOW = '\033[93m'
+   RED = '\033[91m'
+   BOLD = '\033[1m'
+   UNDERLINE = '\033[4m'
+   END = '\033[0m'
+    
+classifier = input(color.BOLD + "Enter the Classifier name:  " + color.END)
+
+print("\n")
+print(color.BOLD + "Question Statements: " + color.END)
+q1 = float(input("Enter the No of Transactions: "))
+q2 = float(input("Enter the No of Orders: "))
+q3 = float(input("Enter the No of Payments: "))
+q4 = float(input("Enter the Total transaction amount: "))
+q5 = float(input("Enter the No of transactions Failures: "))
+q6 = float(input("Enter the No of CardPayments: "))
+q7 = float(input("Enter the No of BitcoinPayments: "))
+q8 = float(input("Enter the No of OrdersFulfilled: "))
+q9 = float(input("Enter the  American Express CardPayments:"))
+q10 = float(input("Enter the VISA16 Payments: "))
+
+outp = [[q1,q2,q3,q4,q5,q6,q7,q8,q9,q10]]
+
+if classifier == "Logistic Regression":
+    
+    out = lr.predict(outp)
+    if out == [1]:
+        print(out)
+        print(color.BOLD + "Transaction Fraud Detected!" + color.END)
+    elif out == [0]:
+        print(out)
+        print(color.BOLD + "Transaction Safe!" + color.END)
+        
+elif classifier == "KMeans":
+    
+    out = k_means.predict(outp)
+    if out == [1]:
+        print(out)
+        print(color.BOLD + "Transaction Fraud Detected!" + color.END)
+    elif out == [0]:
+        print(out)
+        print(color.BOLD + "Transaction Safe!" + color.END)
+        
+elif classifier == "Decision Tree":
+    
+    out = dtc.predict(outp)
+    if out == [1]:
+        print(out)
+        print(color.BOLD + "Transaction Fraud Detected!" + color.END)
+    elif out == [0]:
+        print(out)
+        print(color.BOLD + "Transaction Safe!" + color.END)
+        
+elif classifier == "KNN":
+    
+    out = knn.predict(outp)
+    if out == [1]:
+        print(out)
+        print(color.BOLD + "Transaction Fraud Detected!" + color.END)
+    elif out == [0]:
+        print(out)
+        print(color.BOLD + "Transaction Safe!" + color.END)
+        
+elif classifier == "Random Forest":
+    
+    out = rfc.predict(outp)
+    if out == [1]:
+        print(out)
+        print(color.BOLD + "Transaction Fraud Detected!" + color.END)
+    elif out == [0]:
+        print(out)
+        print(color.BOLD + "Transaction Safe!" + color.END)
+        
+elif classifier == "Gradient Boosting":
+    
+    out = gbc.predict(outp)
+    if out == [1]:
+        print(out)
+        print(color.BOLD + "Transaction Fraud Detected!" + color.END)
+    elif out == [0]:
+        print(out)
+        print(color.BOLD + "Transaction Safe!" + color.END)
+        
+elif classifier == "Support Vector Machines":
+    
+    out = svc.predict(outp)
+    if out == [1]:
+        print(out)
+        print(color.BOLD + "Transaction Fraud Detected!" + color.END)
+    elif out == [0]:
+        print(out)
+        print(color.BOLD + "Transaction Safe!" + color.END)
+        
+elif classifier == "Perceptron":
+    
+    out = clf.predict(outp)
+    if out == [1]:
+        print(out)
+        print(color.BOLD + "Transaction Fraud Detected!" + color.END)
+    elif out == [0]:
+        print(out)
+        print(color.BOLD + "Transaction Safe!" + color.END)
+        
+elif classifier == "MLP":
+    
+    out = mlp.predict(outp)
+    if out == [1]:
+        print(out)
+        print(color.BOLD + "Transaction Fraud Detected!" + color.END)
+    elif out == [0]:
+        print(out)
+        print(color.BOLD + "Transaction Safe!" + color.END)
